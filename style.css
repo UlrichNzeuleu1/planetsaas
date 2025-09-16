@@ -861,3 +861,12 @@ ol {
   gap: 5px;
   width: 40%;
 }
+.rkt-go-to-line{
+  margin-bottom: 40px;
+}
+.rkt-heading-how-it-works{
+  line-height: 1em;
+}
+.rkt-space-before-form-conatainer{
+  margin-top: 3em;
+}
