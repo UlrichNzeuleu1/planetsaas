@@ -796,6 +796,7 @@ ol {
   border-radius: 12px;
   background: #070A25;
   box-shadow: 0px 0px 8px 4px #00000066;
+  margin-top: 30px;
 }
 
 .form-container form{
@@ -874,5 +875,18 @@ ol {
   margin-bottom: 2em;
 }
 .plts-justify-text{
-  text-align: justify;
+  text-align: right;
+}
+.plts-space-between-step{
+  margin-bottom: 30px;
+}
+.plts-adding-margin-top{
+  margin-top: 30px;
+}
+.plts-adding-margin-bottom{
+  margin-bottom: 30px;
+}
+.plts-add-margin-bottom{
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
