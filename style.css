@@ -163,8 +163,11 @@ ol {
 }
 
 .navy-gradient-bg p {
-  font-size: 1.3em;
-  line-height: 2;
+  line-height: 1.5;
+
+  @media (max-width: 390) {
+    font-size: 1em;
+  }
 }
 
 
@@ -418,7 +421,7 @@ ol {
   }
 
   .home-card-wrapper .cms-heading-inner {
-    font-size: 1em !important;
+    font-size: 1.8em !important;
   }
 }
 
@@ -552,6 +555,10 @@ ol {
 
 .steps-container{
   position: relative;
+  @media (max-width:390px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .steps-indicator{  
@@ -600,6 +607,14 @@ ol {
 }
 .highlight-card {
   display: flex;
+  flex-wrap: nowrap;
+
+  
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Alignement vertical sur mobile */
+    }
+}
 }
 .highlight-card  > .wpb_column  {
   padding: 15px;
@@ -641,13 +656,25 @@ ol {
 }
 
 /* LAUNCH PACK */
-.launch-container > .wpb_wrapper{
-  display: grid;
-  grid-template-areas:
-    "main main"
-    "description action";
+.launch-container > .wpb_wrapper {
+  display: grid; 
+  grid-template-areas: 
+    "main main" 
+    "description action"; 
   grid-template-columns: 1fr 320px; 
   gap: 20px;
+  padding: 20px;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .launch-container > .wpb_wrapper {
+    grid-template-areas: 
+      "main" 
+      "description"
+      "action";
+    grid-template-columns: 1fr;
+  }
 }
 
 .launch-main{
@@ -667,6 +694,7 @@ ol {
   padding: 20px;
   display: grid;
   gap: 5px;
+  margin-bottom: 3em;
 }
 
 .fresh-heading > h1 {
@@ -706,7 +734,7 @@ ol {
 
 .accordion a{
   position: relative;
-  padding: 30px 50px !important;
+  padding: 30px 100px !important;
   border: none !important;
   background: transparent !important;
   color: var(--primary-text) !important;
@@ -759,9 +787,10 @@ ol {
 }
 
 .accordion a span {
-  margin-left: 40px;
+  margin-left: 0px;
   font-weight: 400;
   font-size: 23.8px;
+  margin-right: 0px !important;
 }
 
 .accordion:nth-child(1)::before{
@@ -805,6 +834,14 @@ ol {
   padding: 40px;
 }
 
+@media (max-width: 375px) and (max-height: 844px){
+  .form-container form{
+    /*display: grid;
+    place-items: center;*/
+    padding: 40px 40px 40px 0px;
+  }
+}
+
 .form-container form p{
   width: 100%;
 }
@@ -842,14 +879,19 @@ ol {
   background: #070A25;
   border:1px solid #392279;
 }
-.company-info{
+.company-info {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 30px;
 }
+@media (max-width: 768px){
+    .entry-content .vc_row-fluid {
+      flex-direction: column;
+    }
+}
 .company-info .planet-saas{
-  margin-bottom: -30px;
+  margin-bottom: 0px;
 }
 .centered-socials {
   margin-left: auto;
@@ -862,6 +904,7 @@ ol {
   gap: 5px;
   width: 40%;
 }
+
 .rkt-go-to-line{
   margin-bottom: 40px;
 }
@@ -883,10 +926,33 @@ ol {
 .plts-adding-margin-top{
   margin-top: 30px;
 }
-.plts-adding-margin-bottom{
+
+.wpb_column > .wpb_wrapper > .plts-adding-margin-bottom:last-child{
   margin-bottom: 30px;
 }
-.plts-add-margin-bottom{
-  margin-bottom: 50px;
-  margin-top: 30px;
+.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid>li{
+  padding: 0 20px 0 0px;
+}
+
+@media (max-width:768px) {
+  .plts-margin-bottom{
+    padding-bottom: 20px;
+  }
+}
+.plts-ml{
+  margin-left: 15px;
+}
+
+
+.plts-wpb_single_image img{
+  height: auto; 
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/* Styles pour les écrans mobiles */  
+@media (max-width: 768px) {
+    .plts-wpb_single_image img {
+        width: 100%; 
+    }
 }
